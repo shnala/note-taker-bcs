@@ -40,7 +40,9 @@ const saveNote = (note) =>
       'Content-Type': 'application/json',
     },
     body: JSON.stringify(note),
-  });
+  },
+  getAndRenderNotes()
+  );
 
 const deleteNote = (id) =>
   fetch(`/api/notes/${id}`, {
@@ -48,7 +50,9 @@ const deleteNote = (id) =>
     headers: {
       'Content-Type': 'application/json',
     },
-  });
+  },
+  getAndRenderNotes()
+  );
 
 const renderActiveNote = () => {
   hide(saveNoteBtn);
@@ -108,6 +112,7 @@ const handleNewNoteView = (e) => {
   renderActiveNote();
 };
 
+//If there is no title or no text input in the form, do not render the save button.
 const handleRenderSaveBtn = () => {
   if (!noteTitle.value.trim() || !noteText.value.trim()) {
     hide(saveNoteBtn);
