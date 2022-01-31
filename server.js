@@ -1,6 +1,9 @@
+//TODO: Not necessary for app functionality, but find out why insomnia POST requests create an object with only an 'id' property but no 'title' or 'text' properties. Try commenting out the entirety of index.js.
+//Importing function for generating random id for note objects.
 const { randomUUID } = require('crypto');
 const express = require('express');
 const path = require('path');
+//Modularizing functions related to data persistance. This will read/write JSON files so that notes will persist on refresh.
 const { readAndAppend, writeToFile, readFromFile } = require('./assets/fsUtils');
 
 
@@ -25,6 +28,7 @@ app.get('/api/notes', (req, res) =>
     res.json(JSON.parse(data))
 ));
 
+//POST route for creating and saving new notes. Each note has a randomly generated id value which is used in the DELETE route.
 app.post('/api/notes', (req, res) =>{
     console.log('A post request has been recieved 😨')
 
@@ -41,6 +45,7 @@ app.post('/api/notes', (req, res) =>{
 
 });
 
+//DELETE route for removing notes from the page. Removes note from db.json as well.
 app.delete('/api/notes/:id', (req, res) =>{
     const noteId = req.params.id
     console.log(`You console logged ${noteId}`);

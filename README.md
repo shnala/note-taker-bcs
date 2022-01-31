@@ -28,9 +28,9 @@ THEN I am presented with a page with existing notes listed in the left-hand colu
 WHEN I enter a new note title and the note’s text
 THEN a Save icon appears in the navigation at the top of the page (DONE)
 WHEN I click on the Save icon
-THEN the new note I have entered is saved and appears in the left-hand column with the other existing notes (NEEDS WORK)
+THEN the new note I have entered is saved and appears in the left-hand column with the other existing notes (DONE)
 WHEN I click on an existing note in the list in the left-hand column
-THEN that note appears in the right-hand column (NEEDS WORK)
+THEN that note appears in the right-hand column (DONE)
 WHEN I click on the Write icon in the navigation at the top of the page
 THEN I am presented with empty fields to enter a new note title and the note’s text in the right-hand column (DONE)
 ```
@@ -59,14 +59,14 @@ The following API routes should be created:
 
 * `GET /api/notes` should read the `db.json` file and return all saved notes as JSON. (DONE)
 
-* `POST /api/notes` should receive a new note to save on the request body, add it to the `db.json` file, and then return the new note to the client. You'll need to find a way to give each note a unique id when it's saved (look into npm packages that could do this for you). (ALMOST DONE)
+* `POST /api/notes` should receive a new note to save on the request body, add it to the `db.json` file, and then return the new note to the client. You'll need to find a way to give each note a unique id when it's saved (look into npm packages that could do this for you). (DONE)
 
 
 ## Bonus
 
 You haven’t learned how to handle DELETE requests, but this application offers that functionality on the front end. As a bonus, try to add the DELETE route to the application using the following guideline:
 
-* `DELETE /api/notes/:id` should receive a query parameter that contains the id of a note to delete. To delete a note, you'll need to read all notes from the `db.json` file, remove the note with the given `id` property, and then rewrite the notes to the `db.json` file.
+* `DELETE /api/notes/:id` should receive a query parameter that contains the id of a note to delete. To delete a note, you'll need to read all notes from the `db.json` file, remove the note with the given `id` property, and then rewrite the notes to the `db.json` file. (DONE)
 
 
 ## Grading Requirements
@@ -78,11 +78,11 @@ This homework is graded based on the following criteria:
 
 * Satisfies all of the preceding acceptance criteria plus the following:
 
-  * Application front end must connect to an Express.js back end.
+  * Application front end must connect to an Express.js back end. (DONE)
 
-  * Application back end must store notes that have a unique id in a JSON file.
+  * Application back end must store notes that have a unique id in a JSON file.  (DONE)
 
-  * Application must be deployed to Heroku.
+  * Application must be deployed to Heroku.  
 
 
 ### Deployment: 36%
@@ -93,12 +93,12 @@ This homework is graded based on the following criteria:
 
 * Application GitHub URL submitted.
 
-* GitHub repository contains application code.
+* GitHub repository contains application code.(DONE)
 
 
 ### Application Quality: 11%
 
-* Application console is free of errors.
+* Application console is free of errors. (KINDA)
 
 
 ### Repository Quality: 13%
