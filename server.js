@@ -1,4 +1,3 @@
-//TODO: Not necessary for app functionality, but find out why insomnia POST requests create an object with only an 'id' property but no 'title' or 'text' properties. Try commenting out the entirety of index.js.
 //Importing function for generating random id for note objects.
 const { randomUUID } = require('crypto');
 const express = require('express');
