@@ -15,7 +15,7 @@ This is a simple, web-based note-taking app that uses Javascript and Express to 
 ## Installation
 
 No installation is required if using the app at its deployed link:
-[https://aqueous-springs-59524.herokuapp.com/]
+[https://shrouded-scrubland-38516.herokuapp.com/]
 
 If downloading the app directly from GitHub, the module 'express' must be downloaded before the app can function. Run 'npm install express' in the terminal upon download, and then type 'node server.js' to open the server. The site will then be live at local port 3001; simply navigate to [https://localhost:3001] to access it.
 
